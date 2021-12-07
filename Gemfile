@@ -31,6 +31,9 @@ gem "rake", "~> 13.0"
 # Provides functionality to interact with a SQLite3 database
 gem "sqlite3", "~> 1.4"
 
+# Allows you to generate fake data for your models
+gem "faker"
+
 # Require all files in a folder
 gem "require_all", "~> 3.0"
 
