@@ -5,7 +5,7 @@ class ApplicationController < Sinatra::Base
 
   # Add your routes here
   get '/' do
-    { message: 'Good luck with your project!' }.to_json
+    { message: 'Welcome to FIS-Assist!' }.to_json
   end
 
   get '/courses' do
@@ -86,6 +86,16 @@ class ApplicationController < Sinatra::Base
   get '/assignment/:id/students' do
     assignment = Assignment.find(params[:id])
     assignment.students.to_json
+  end
+
+  get '/question/:id/students' do
+    question = Question.find(params[:id])
+    question.students.to_json
+  end
+
+  get '/question/:id/assignments' do
+    question = Question.find(params[:id])
+    question.assignments.to_json
   end
 
   error { { message: 'Something went wrong!' }.to_json }
