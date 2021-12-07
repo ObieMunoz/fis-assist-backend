@@ -3,11 +3,11 @@
 Student.destroy_all
 Assignment.destroy_all
 Course.destroy_all
-
-puts '🌱 Seeding spices...'
+Question.destroy_all
 
 # Seed your database here
 
+puts '✓ Building students...'
 10.times do |r|
   Student.create(
     first_name: Faker::Name.first_name,
@@ -17,13 +17,7 @@ puts '🌱 Seeding spices...'
   )
 end
 
-10.times do |r|
-  Assignment.create(
-    title: Faker::Lorem.word,
-    description: Faker::Lorem.sentence,
-    course_id: rand(1..10),
-  )
-end
+puts '✓ Building courses...'
 
 10.times do |r|
   Course.create(
@@ -31,11 +25,24 @@ end
     description: Faker::Lorem.paragraph,
   )
 end
+puts '✓ Building assignments...'
 
-10.times do |r|
+50.times do |r|
+  Assignment.create(
+    title: Faker::Lorem.word,
+    description: Faker::Lorem.sentence,
+    course_id: Course.all.sample.id,
+  )
+end
+
+puts '✓ Building questions...'
+
+50.times do |r|
   Question.create(
     question: Faker::Lorem.sentence,
     answer: Faker::Lorem.sentence,
+    assignment_id: Assignment.all.sample.id,
+    student_id: Student.all.sample.id,
   )
 end
 
