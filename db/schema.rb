@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_07_160329) do
+ActiveRecord::Schema.define(version: 2021_12_08_145728) do
 
   create_table "assignments", force: :cascade do |t|
     t.string "title"
     t.text "description"
-    t.integer "course_id"
+    t.integer "mod_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -23,11 +23,10 @@ ActiveRecord::Schema.define(version: 2021_12_07_160329) do
     t.string "description"
   end
 
-  create_table "courses_students", id: false, force: :cascade do |t|
-    t.integer "course_id", null: false
-    t.integer "student_id", null: false
-    t.index ["course_id"], name: "index_courses_students_on_course_id"
-    t.index ["student_id"], name: "index_courses_students_on_student_id"
+  create_table "mods", force: :cascade do |t|
+    t.string "title"
+    t.integer "course_id"
+    t.integer "assignment_id"
   end
 
   create_table "questions", force: :cascade do |t|
