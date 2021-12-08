@@ -4,6 +4,7 @@ Student.destroy_all
 Assignment.destroy_all
 Course.destroy_all
 Question.destroy_all
+Mod.destroy_all
 
 # Seed your database here
 
@@ -31,28 +32,35 @@ phase3 = Course.create(title: 'Phase 3', description: 'Ruby')
 phase4 = Course.create(title: 'Phase 4', description: 'Ruby on Rails')
 
 puts '✓ Building mods...'
-Mod.create(title: 'Git')
+Mod.create(title: 'Git', course_id: 1)
 
-Mod.create(title: 'HTML')
+Mod.create(title: 'HTML', course_id: 1)
 
-Mod.create(title: 'CSS')
+Mod.create(title: 'CSS', course_id: 1)
 
-Mod.create(title: 'Programming as Conversation Part 1: Expressions')
+Mod.create(
+  title: 'Programming as Conversation Part 1: Expressions',
+  course_id: 1,
+)
 
-Mod.create(title: 'Programming as Conversation Part 2: Statements')
+Mod.create(
+  title: 'Programming as Conversation Part 2: Statements',
+  course_id: 1,
+)
 
 Mod.create(
   title:
     'Programming as Conversation Part 3: Bundling Expressions and Statements into Functions',
+  course_id: 1,
 )
 
-Mod.create(title: 'Working with Data Structures')
+Mod.create(title: 'Working with Data Structures', course_id: 1)
 
-Mod.create(title: 'Manipulating the DOM')
+Mod.create(title: 'Manipulating the DOM', course_id: 1)
 
-Mod.create(title: 'JavaScript Events')
+Mod.create(title: 'JavaScript Events', course_id: 1)
 
-Mod.create(title: 'JavaScript Events')
+Mod.create(title: 'JavaScript Events', course_id: 1)
 
 puts '✓ Building assignments...'
 

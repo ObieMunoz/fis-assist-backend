@@ -1,4 +1,4 @@
 class Mod < ActiveRecord::Base
-  has_many :courses
+  belongs_to :course
   has_many :assignments
 end

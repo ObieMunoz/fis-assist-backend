@@ -19,3 +19,4 @@ use CourseController
 use AssignmentController
 use StudentController
 use QuestionController
+use ModController
