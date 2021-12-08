@@ -68,20 +68,20 @@ Assignment.create(
   title: 'JavaScript Function Parameters Lab',
   description:
     'Defining a function that uses a parameter, a function that uses two parameters, and a function with a parameter that has a default value.',
-  mod_id: Mod.all.sample.id,
+  mod_id: Mod.find_by(title: 'Working with Data Structures').id,
 )
 
 Assignment.create(
   title: 'HTML Album Cover',
   description: 'Use common HTML tags to produce a webpage based on a mock-up',
-  mod_id: Mod.all.sample.id,
+  mod_id: Mod.find_by(title: 'HTML').id,
 )
 
 Assignment.create(
-  title: 'Moving Things With JavaScript by Acting on Events',
+  title: 'Moving Things with JavaScript by Acting on Events',
   description:
     "Practice moving elements on the page, demonstrate how to move an element in response to a browser event, and demonstrate how to update an element's position on the page conditionally.",
-  mod_id: Mod.all.sample.id,
+  mod_id: Mod.find_by(title: 'JavaScript Events').id,
 )
 
 puts '✓ Building questions...'
@@ -110,7 +110,8 @@ Question.create(
     }
     By setting language='JavaScript' we are assigning language a default value.
     ",
-  assignment_id: Assignment.all.sample.id,
+  assignment_id:
+    Assignment.find_by(title: 'JavaScript Function Parameters Lab').id,
   student_id: Student.all.sample.id,
 )
 
@@ -149,7 +150,7 @@ Question.create(
 
 
     you will need to add the links inside span tags, and insert the columbia logo in between those two span tags.  Span tags are inline containers used to mark up a part of a text.  It is sort of like  a <div> element, but <div> is a block level element and <span> is an inline element.  So in order for the logo to fit in between both links, you will need to put them in between span tags so it all fits in one line.",
-  assignment_id: Assignment.all.sample.id,
+  assignment_id: Assignment.find_by(title: 'HTML Album Cover').id,
   student_id: Student.all.sample.id,
 )
 
@@ -193,7 +194,10 @@ Question.create(
     here the keydown event will be called on.  Inside the event listener we will add an if statement which will call on the moveDodgerRight() function if the 'ArrowRight' key is pressed.
 
     STEP FIVE: type npm test into the console to pass all of the tests.",
-  assignment_id: Assignment.all.sample.id,
+  assignment_id:
+    Assignment.find_by(
+      title: 'Moving Things with JavaScript by Acting on Events',
+    ).id,
   student_id: Student.all.sample.id,
 )
 
