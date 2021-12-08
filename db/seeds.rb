@@ -51,18 +51,18 @@ puts '✓ Building assignments...'
 Assignment.create(
     title: "JavaScript Function Parameters Lab",
     description: "Defining a function that uses a parameter, a function that uses two parameters, and a function with a parameter that has a default value.",
-    course_id: Course.all.sample.id,
+    course_id: Course.all.sample.id
 )
 
 Assignment.create(
     title: "HTML Album Cover",
-    description: "Use common HTML tags to produce a webpage based on a mock-up"
-    course_id: Course.all.sample.id,
+    description: "Use common HTML tags to produce a webpage based on a mock-up",
+    course_id: Course.all.sample.id
 )
 
 Assignment.create(
     title: "Moving Things With JavaScript by Acting on Events",
-    description: "Practice moving elements on the page, demonstrate how to move an element in response to a browser event, and demonstrate how to update an element's position on the page conditionally."
+    description: "Practice moving elements on the page, demonstrate how to move an element in response to a browser event, and demonstrate how to update an element's position on the page conditionally.",
     course_id: Course.all.sample.id
 )
 
