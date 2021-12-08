@@ -19,5 +19,5 @@ class QuestionController < ApplicationController
     Question.find(params[:id]).assignments.to_json
   end
 
-  error { { message: 'That student does not exist.' }.to_json }
+  error { { message: 'Error retrieving question information.' }.to_json }
 end

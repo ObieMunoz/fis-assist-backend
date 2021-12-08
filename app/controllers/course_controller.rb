@@ -24,5 +24,5 @@ class CourseController < ApplicationController
     Course.find(params[:id]).questions.to_json
   end
 
-  error { { message: 'That course does not exist.' }.to_json }
+  error { { message: 'Error retrieving course information.' }.to_json }
 end

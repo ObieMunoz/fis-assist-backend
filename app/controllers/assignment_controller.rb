@@ -20,5 +20,5 @@ class AssignmentController < ApplicationController
     Assignment.find(params[:id]).questions.to_json
   end
 
-  error { { message: 'That assignment does not exist.' }.to_json }
+  error { { message: 'Error retrieving assignment information.' }.to_json }
 end

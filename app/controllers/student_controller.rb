@@ -12,7 +12,7 @@ class StudentController < ApplicationController
   end
 
   get '/student/:id/assignments' do
-    Student.find(params[:id]).assignments.to_json
+    Student.find(params[:id]).assignments.to_json(include: :course)
   end
 
   get '/student/:id/courses' do
@@ -23,5 +23,5 @@ class StudentController < ApplicationController
     Student.find(params[:id]).questions.to_json
   end
 
-  error { { message: 'That student does not exist.' }.to_json }
+  error { { message: 'Error retrieving student information.' }.to_json }
 end
