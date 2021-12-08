@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
   # Add your routes here
   get '/' do
     {
-      message: 'Welcome to FIS-Assist!',
+      message: 'Welcome to the FIS-Assist API!',
       available_routes: {
         courses: %w[
           /courses
