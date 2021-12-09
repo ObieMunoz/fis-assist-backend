@@ -24,5 +24,9 @@ class ModController < ApplicationController
     Mod.find(params[:id]).questions.to_json
   end
 
+  post '/mods' do
+    Mod.create(title: params[:title], course_id: params[:course_id]).to_json
+  end
+
   error { { message: 'Error retrieving mod information.' }.to_json }
 end
