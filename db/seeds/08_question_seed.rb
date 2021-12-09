@@ -20,27 +20,30 @@ puts 'Seeding questions...'
     question: 'How do I solve the HTML Album Cover lab?',
     answer:
       "
-        ## STEP ONE:
+        # STEP ONE:
   
         Do not forget to run npm install to install the lab's dependencies.
   
-        ## STEP TWO:
+        # STEP TWO:
   
         Find the text for the album in SOURCE.md.  Here you are being told what goes where exactly.
   
-        ## STEP THREE:
+        # STEP THREE:
   
         Add the corresponding tags in the div with the id='front' and make sure these tags are added inside the div='title-box'
   
-        ```<h4>PHARRELL WILLIAMS</h4>
+        ```
+        <h4>PHARRELL WILLIAMS</h4>
         <h2>HAPPY</h2>
-        <h4>| FROM DESPICABLE ME 2 |</h4>```
+        <h4>| FROM DESPICABLE ME 2 |</h4>
+        ```
   
-        ## STEP THREE:
+        # STEP THREE:
   
         Add the corresponding tags in the div with id='back' and class='album'.  This is the information you are being told to add to the BACK in the SOURCE.md file.
   
-        ```<h3>| &nbsp;&nbsp; FROM DESPICABLE ME 2 &nbsp;&nbsp; |</h3>
+        ```
+        <h3>| &nbsp;&nbsp; FROM DESPICABLE ME 2 &nbsp;&nbsp; |</h3>
   
         <h1>HAPPY</h1>
   
@@ -56,7 +59,8 @@ puts 'Seeding questions...'
   
         <br>
   
-        <img src='https://s3.amazonaws.com/learn-verified/sony-logo.png' alt='[sony-logo.png]'>```
+        <img src='https://s3.amazonaws.com/learn-verified/sony-logo.png' alt='[sony-logo.png]'>
+        ```
   
   
         you will need to add the links inside span tags, and insert the columbia logo in between those two span tags.  Span tags are inline containers used to mark up a part of a text.  It is sort of like  a <div> element, but <div> is a block level element and <span> is an inline element.  So in order for the logo to fit in between both links, you will need to put them in between span tags so it all fits in one line.",
@@ -66,55 +70,57 @@ puts 'Seeding questions...'
 
   # ------------CSS------------
 
-  # ------------Programming as Conversation Part 1: Expressions------------
-
-  # ------------Programming as Conversation Part 2: Statements------------
-
   # ------------Programming as Conversation Part 3: Bundling Expressions and Statements into Functions------------
-
-  # ------------Working with Data Structures------------
 
   Question.create(
     question: 'How do I solve JavaScript Function Parameters Lab?',
     answer:
       "
-        ## STEP ONE:
+        # STEP ONE:
   
         Fork and clone the lab into your local environment.  Then navigate into its directory in the terminal, and run 'code .' to open Visual Studio Code.  Finally run npm install on your terminal.
   
-        ## STEP TWO:
+        # STEP TWO:
   
         Define a function called introduction that defines a parameter, name, and returns the phrase: 'Hi, my name is ${name}'.
   
-        ```function introduction(name) {
+        ```
+        function introduction(name) {
           return(`Hi, my name is ${name}.`)
-        }```
+        }
+        ```
   
         Be sure to use backticks so the interpolation works.  Calling the function 'introduction('Josh');' with the string of Josh as a parameter will return 'Hi, my name is Josh'.
   
-        ## STEP THREE:
+        # STEP THREE:
   
         Define a function called introductionWithLanguage that defines two parameters, name and language, and returns the phrase: 'Hi, my name is [name] and I am learning to program in [language].'.  You will need to type out
   
-        ```function introductionWithLanguage(name, language) {
+        ```
+        function introductionWithLanguage(name, language) {
             return `Hi, my name is ${name} and I am learning to program in ${language}.`;
-        }```
+        }
+        ```
   
         Don't forget to use backticks when interpolating.
   
-        ## STEP FOUR:
+        # STEP FOUR:
   
         Copy the function you created for the second test and name it introductionWithLanguageOptional. It should have two parameters, name and language, and the second parameter should have a default value of 'JavaScript'.  You will need to type out
   
-        ```function introductionWithLanguageOptional (name, language = 'JavaScript') {
+        ```
+        function introductionWithLanguageOptional (name, language = 'JavaScript') {
             return `Hi, my name is ${name} and I am learning to program in ${language}.`;
-        }```
+        }
+        ```
   
         By setting language='JavaScript' we are assigning language a default value.",
     assignment_id:
       Assignment.find_by(title: 'JavaScript Function Parameters Lab').id,
     student_id: Student.all.sample.id,
   )
+
+  # ------------Working with Data Structures------------
 
   # ------------Manipulating the DOM------------
 
@@ -124,20 +130,22 @@ puts 'Seeding questions...'
     question: 'How do I solve Moving Things with JavaScript by Acting on Events?',
     answer:
       "
-        ## STEP ONE:
+        # STEP ONE:
   
         Run npm install in the terminal before working on this lab.
   
-        ## STEP TWO:
+        # STEP TWO:
   
         You have already been shown how to build the moveDodgerLeft() function, now you will need to build a moveDodgerRight() function.  Between these two functions there isn't much difference, one will move the dodger left, while the latter with move the dodger right.
   
-        ## STEP THREE:
+        # STEP THREE:
   
         You will first need to write out the moveDodgerRight() function, and it will look like so
   
-        ```function moveDodgerRight(){
-        }```
+        ```
+        function moveDodgerRight(){
+        }
+        ```
   
         then just as the moveDodgerLeft() function, you will need to write a rightNumbers variable
   
@@ -149,25 +157,29 @@ puts 'Seeding questions...'
   
         here we are parsing rightNumbers as an integer and storing that result in the right variable.  Next we will create an if statement so our function will only move right if the value of the right variable will be less than 360, that way we will know if there is space to move to the right, if there isn't, then the dodger will not move right.  Inside that if statement we will tell the dodger to move to the right
   
-        ```if (right < 360) {
+        ```
+        if (right < 360) {
             dodger.style.left = `${right + 1}px`;
-        }```
+        }
+        ```
   
         Do not forget to use backticks for the interpolation to work.
   
-        ## STEP FOUR:
+        # STEP FOUR:
   
         Add a keydown event listener for moveDodgerRight().  This will call on the moveDodgerRight() function when the right arrow key is pressed.
   
-        ```document.addEventListener('keydown',function(e){
+        ```
+        document.addEventListener('keydown',function(e){
             if (e.key === 'ArrowRight') {
                 moveDodgerRight();
             }
-        })```
+        })
+        ```
   
         here the keydown event will be called on.  Inside the event listener we will add an if statement which will call on the moveDodgerRight() function if the 'ArrowRight' key is pressed.
   
-        ## STEP FIVE:
+        # STEP FIVE:
   
         type npm test into the console to pass all of the tests.",
     assignment_id:
@@ -177,7 +189,7 @@ puts 'Seeding questions...'
     student_id: Student.all.sample.id,
   )
 
-  # ------------Project Mode------------
+  # ------------Preparing for Phase 1------------
 
 
 
@@ -207,7 +219,9 @@ puts 'Seeding questions...'
       "
       You will want to first, create a variable for the element you are trying to grab.  Let's say you want to grab the task form with the id='create-task-form', you will want to name the variable to reflect what element you are grabbing. The name 'newTaskForm would fit perfectly, since we are grabbing the element with the id of 'create-task-form'.
   
-      ```const newTaskForm = document.getElementById('create-task-form');```
+      ```
+      const newTaskForm = document.getElementById('create-task-form');
+      ```
   
       This way you can store the element inside of the newTaskForm variable and grab it by calling the variable instead of writing out the whole getElementById every time, it also makes your code a lot cleaner and more readable.
       ",
@@ -242,32 +256,43 @@ puts 'Seeding questions...'
       'In the App component, how do I pass down a prop of bio to the About component?',
     answer:
       "
-      ## STEP ONE: you will need to import the About component at the top of your App component
+      # STEP ONE: you will need to import the About component at the top of your App component
   
-      ```import About from './About';```
+      ```
+      import About from './About';
+      ```
   
-      ## STEP TWO: Import user to get the user data, since the user contains the bio we will need
+      # STEP TWO: Import user to get the user data, since the user contains the bio we will need
   
-      ```import user from '../data/user';```
+      ```
+      import user from '../data/user';
+      ```
   
-      ## STEP THREE: Inside the `function App() { }` and inside the return, you will need to add the child About component
+      # STEP THREE: Inside the `function App() { }` and inside the return, you will need to add the child About component
   
-      ```<About />```
+      ```
+      <About />
+      ```
   
       it is best to add this inside a div, for you will have to add other child components, and react does not like it when various child components aren't grouped inside of a <div></div>
   
-      ## STEP FOUR: inside of the child About component, you will need to pass down a prop of bio
+      # STEP FOUR: inside of the child About component, you will need to pass down a prop of bio
   
-      ```<About bio={user.bio} />```
+      ```
+      <About bio={user.bio} />
+      ```
   
-      ## STEP FIVE: In the About component, you will need to pass in props as a parameter, to be able to access the bio props
+      # STEP FIVE: In the About component, you will need to pass in props as a parameter, to be able to access the bio props
   
-      ```function About(props)```
+      ```
+      function About(props)
+      ```
   
       or if you want to be fancy, you can destructure bio
   
-      ```function About( { bio } )```
-  
+      ```
+      function About( { bio } )
+      ```
       ",
     assignment_id: Assignment.find_by(title: 'Props Basics Lab').id,
     student_id: Student.all.sample.id,
@@ -278,20 +303,22 @@ puts 'Seeding questions...'
   Question.create(
     question:"How do I write a handleDarkModeClick() function?",
     answer:"
-  
-    ## STEP ONE:
-  
+    # STEP ONE:
     You will need to create a state for the dark mode inside of the App() function
   
-    ```const [isDarkMode, setIsDarkMode] = useState(false);``` 
+    ```
+    const [isDarkMode, setIsDarkMode] = useState(false);
+    ``` 
   
-    ## STEP TWO:
+    # STEP TWO:
     
     You will then need to write out a function called handleDarkModeClick() inside the App() function, under your useState
     
-    ```function handleDarkModeClick() {
+    ```
+    function handleDarkModeClick() {
       setIsDarkMode((isDarkMode) => !isDarkMode);
-    }```
+    }
+    ```
     ",
     assignment_id: Assignment.find_by(title: 'React Information Flow Lab').id
   )
@@ -310,16 +337,13 @@ puts 'Seeding questions...'
 
   # ------------[Optional] Class Components------------
 
-  
+
 
 # ------------PHASE THREE (3)------------
 
 
 
 # ------------PHASE FOUR (4)------------
-
-
-
 
 puts '✓ Questions loaded successfully!'
 
