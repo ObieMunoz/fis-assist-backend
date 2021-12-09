@@ -8,6 +8,10 @@ class CourseController < ApplicationController
     Course.all.to_json
   end
 
+  get '/course/:id/mods' do
+    course = Course.find(params[:id]).mods
+  end
+
   get '/course/:id' do
     Course.find(params[:id]).to_json
   end
