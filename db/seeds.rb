@@ -106,11 +106,11 @@ Question.create(
   question: 'How do I solve JavaScript Function Parameters Lab?',
   answer:
     "
-    -STEP ONE: 
+    ## STEP ONE: 
     
     Fork and clone the lab into your local environment.  Then navigate into its directory in the terminal, and run 'code .' to open Visual Studio Code.  Finally run npm install on your terminal.
 
-    -STEP TWO: 
+    ## STEP TWO: 
     
     Define a function called introduction that defines a parameter, name, and returns the phrase: 'Hi, my name is ${name}'. 
     
@@ -120,7 +120,7 @@ Question.create(
 
     Be sure to use backticks so the interpolation works.  Calling the function 'introduction('Josh');' with the string of Josh as a parameter will return 'Hi, my name is Josh'.
 
-    -STEP THREE: 
+    ## STEP THREE: 
     
     Define a function called introductionWithLanguage that defines two parameters, name and language, and returns the phrase: 'Hi, my name is [name] and I am learning to program in [language].'.  You will need to type out
     
@@ -130,7 +130,7 @@ Question.create(
 
     Don't forget to use backticks when interpolating.
 
-    -STEP FOUR:
+    ## STEP FOUR:
 
     Copy the function you created for the second test and name it introductionWithLanguageOptional. It should have two parameters, name and language, and the second parameter should have a default value of 'JavaScript'.  You will need to type out
     
@@ -148,15 +148,15 @@ Question.create(
   question: 'How do I solve the HTML Album Cover lab?',
   answer:
     "
-    -STEP ONE: 
+    ## STEP ONE: 
     
     Do not forget to run npm install to install the lab's dependencies.
 
-    -STEP TWO: 
+    ## STEP TWO: 
     
     Find the text for the album in SOURCE.md.  Here you are being told what goes where exactly.
 
-    -STEP THREE: 
+    ## STEP THREE: 
     
     Add the corresponding tags in the div with the id='front' and make sure these tags are added inside the div='title-box'
 
@@ -164,7 +164,7 @@ Question.create(
     <h2>HAPPY</h2>
     <h4>| FROM DESPICABLE ME 2 |</h4>``
 
-    -STEP THREE: 
+    ## STEP THREE: 
     
     Add the corresponding tags in the div with id='back' and class='album'.  This is the information you are being told to add to the BACK in the SOURCE.md file.
 
@@ -196,15 +196,15 @@ Question.create(
   question: 'How do I solve Moving Things with JavaScript by Acting on Events?',
   answer:
     "
-    -STEP ONE: 
+    ## STEP ONE: 
     
     Run npm install in the terminal before working on this lab.
 
-    -STEP TWO: 
+    ## STEP TWO: 
     
     You have already been shown how to build the moveDodgerLeft() function, now you will need to build a moveDodgerRight() function.  Between these two functions there isn't much difference, one will move the dodger left, while the latter with move the dodger right.
 
-    -STEP THREE: 
+    ## STEP THREE: 
     
     You will first need to write out the moveDodgerRight() function, and it will look like so
 
@@ -227,7 +227,7 @@ Question.create(
 
     Do not forget to use backticks for the interpolation to work.
 
-    -STEP FOUR: 
+    ## STEP FOUR: 
     
     Add a keydown event listener for moveDodgerRight().  This will call on the moveDodgerRight() function when the right arrow key is pressed.
 
@@ -239,7 +239,7 @@ Question.create(
 
     here the keydown event will be called on.  Inside the event listener we will add an if statement which will call on the moveDodgerRight() function if the 'ArrowRight' key is pressed.
 
-    -STEP FIVE: 
+    ## STEP FIVE: 
     
     type npm test into the console to pass all of the tests.",
   assignment_id:
@@ -277,32 +277,32 @@ Question.create(
     question: 'In the App component, how do I pass down a prop of bio to the About component?',
     answer:
       "
-      -STEP ONE: you will need to import the About component at the top of your App component
+      ## STEP ONE: you will need to import the About component at the top of your App component
 
       import About from './About';
 
-      -STEP TWO: Import user to get the user data, since the user contains the bio we will need
+      ## STEP TWO: Import user to get the user data, since the user contains the bio we will need
 
       import user from '../data/user';
 
-      -STEP THREE: Inside the `function App() { }` and inside the return, you will need to add the child About component
+      ## STEP THREE: Inside the `function App() { }` and inside the return, you will need to add the child About component
 
       <About />
 
       it is best to add this inside a div, for you will have to add other child components, and react does not like it when various child components aren't grouped inside of a <div></div>
 
-      -STEP FOUR: inside of the child About component, you will need to pass down a prop of bio
+      ## STEP FOUR: inside of the child About component, you will need to pass down a prop of bio
 
       <About bio={user.bio} />
 
-      -STEP FIVE: In the About component, you will need to pass in props as a parameter, to be able to access the bio props
+      ## STEP FIVE: In the About component, you will need to pass in props as a parameter, to be able to access the bio props
 
       function About(props)
 
       or if you want to be fancy, you can destructure bio
 
       function About( { bio } )
-      
+
       ",
     assignment_id:
       Assignment.find_by(title: 'Props Basics Lab').id,

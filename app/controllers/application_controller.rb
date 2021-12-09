@@ -16,10 +16,10 @@ class ApplicationController < Sinatra::Base
           /course/:id/questions
         ],
         students: %w[
-          /assignments
-          /assignment/:id
-          /assignment/:id/students
-          /assignment/:id/questions
+          /students
+          /student/:id
+          /student/:id/students
+          /student/:id/questions
         ],
         assignments: %w[
           /assignments
@@ -32,6 +32,13 @@ class ApplicationController < Sinatra::Base
           /question/:id
           /question/:id/students
           /question/:id/assignments
+        ],
+        mods: %w[
+          /mods
+          /mod/:id
+          /mod/:id/assignments
+          /mod/:id/students
+          /mod/:id/questions
         ],
       },
     }.to_json
