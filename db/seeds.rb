@@ -100,6 +100,11 @@ Assignment.create(
     mod_id: Mod.find_by(title: 'Props Basics Lab').id
 )
 
+Assignment.create(
+    title: 'Experiencing HTML Lab',
+    description: 'Create ordered and unordered lists of items.',
+  )
+
 puts '✓ Building questions...'
 
 Question.create(
@@ -317,6 +322,14 @@ Question.create(
       Assignment.find_by(title: ' ').id,
     student_id: Student.all.sample.id
 )
+
+Question.create(
+    question:
+      "ERROR: Make sure you created a file called 'my_list.html' in the lab directory with your HTML document in it!",
+    answer:
+      "You need to create a file called 'my_list.html' in the lab directory with your HTML document in it!",
+    assignment_id: Assignment.find_by(title: 'Experiencing HTML Lab').id,
+  )
 
 50.times do |r|
   StudentCourse.create(
