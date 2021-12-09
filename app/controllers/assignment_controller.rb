@@ -20,5 +20,13 @@ class AssignmentController < ApplicationController
     Assignment.find(params[:id]).questions.to_json
   end
 
+  post '/assignments' do
+    Assignment.create(
+      title: params[:title],
+      description: params[:description],
+      mod_id: params[:mod_id],
+    ).to_json
+  end
+
   error { { message: 'Error retrieving assignment information.' }.to_json }
 end
