@@ -6,8 +6,6 @@ Course.destroy_all
 Question.destroy_all
 Mod.destroy_all
 
-# Seed your database here
-
 # Load seeds from all files in db/seeds
 Dir[File.join(File.dirname(__FILE__), 'seeds', '*.rb')].sort.each do |seed|
   load seed

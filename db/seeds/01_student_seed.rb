@@ -7,4 +7,4 @@ puts 'Seeding students...'
     slack_username: Faker::Internet.user_name,
   )
 end
-puts '✓ Students loadded successfully!'
+puts '✓ Students loaded successfully!'
