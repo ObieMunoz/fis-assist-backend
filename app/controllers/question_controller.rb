@@ -25,7 +25,7 @@ class QuestionController < ApplicationController
       answer: params[:answer],
       student_id: params[:studentId][:value],
       assignment_id: params[:assignmentId][:value],
-    )
+    ).to_json
   end
 
   error { { message: 'Error retrieving question information.' }.to_json }

@@ -23,5 +23,14 @@ class StudentController < ApplicationController
     Student.find(params[:id]).questions.to_json
   end
 
+  post '/students' do
+    Student.create(
+      first_name: params[:first_name],
+      last_name: params[:last_name],
+      email: params[:email],
+      slack_username: params[:slack_username],
+    ).to_json
+  end
+
   error { { message: 'Error retrieving student information.' }.to_json }
 end
