@@ -24,7 +24,7 @@ class AssignmentController < ApplicationController
     Assignment.create(
       title: params[:title],
       description: params[:description],
-      mod_id: params[:mod_id],
+      mod_id: params[:mod_id][:value],
     ).to_json
   end
 
