@@ -19,5 +19,14 @@ class QuestionController < ApplicationController
     Question.find(params[:id]).assignments.to_json
   end
 
+  post '/questions' do
+    Question.create(
+      question: params['question'],
+      answer: params[:answer],
+      student_id: params[:studentId][:value],
+      assignment_id: params[:assignmentId][:value],
+    )
+  end
+
   error { { message: 'Error retrieving question information.' }.to_json }
 end
