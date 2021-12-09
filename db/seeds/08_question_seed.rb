@@ -341,10 +341,56 @@ puts 'Seeding questions...'
 
 # ------------PHASE THREE (3)------------
 
+  # ------------Ruby Fundamentals------------
+
+  # ------------Ruby Fundamentals: Arrays and Hashes------------
+
+  # ------------Configuring Ruby Applications------------
+
+  # ------------[Optional] Regex------------
+
+  # ------------Introduction to Object-Orientation in Ruby------------
+
+  # ------------Topics in OO - Self in Ruby------------
+
+  # ------------Topics in OO - Class Variables and Methods in Ruby------------
+
+  # ------------Topics in OO - Object Inheritance in Ruby------------
+
+  # ------------Object-Relational Mapping------------
+
+  # ------------[Optional] Advanced ORM Methods------------
+
+  # ------------Using Active Record------------
+
+  # ------------Active Record Associations------------
+
+  # ------------Additional Practice: Active Record------------
+
+  # ------------[Optional] Getting Data from Remote Sources------------
+
+  # ------------[Optional] Scraping------------
+
+  # ------------Web API Basics with Sinatra------------
+
+  # ------------Code Challenge------------
+
+  Question.create(
+    question:"LOL",
+    answer:"Just Kidding ;)",
+    assignment_id: Assignment.find_by(title: 'Code Challenge').id
+  )
+
 
 
 # ------------PHASE FOUR (4)------------
 
 puts '✓ Questions loaded successfully!'
+
+# Question.create(
+#   question:"",
+#   answer:"",
+#   assignment_id: Assignment.find_by(title: '').id
+# )
 
 

@@ -56,7 +56,7 @@ Mod.create(title: 'Components and Props', course_id: 3)
 Mod.create(title: 'State and Events', course_id: 3)
 Mod.create(title: 'Additional Practice: State and Events', course_id: 3)
 Mod.create(title: 'Side Effects and Data Fetching', course_id: 3)
-Mod.create(title: '[Optional] React Under the Hood', course_id: 3)
+# Mod.create(title: '[Optional] React Under the Hood', course_id: 3)
 Mod.create(title: 'Additional Practice', course_id: 3)
 Mod.create(title: 'Client-Side Routing', course_id: 3)
 Mod.create(title: '[Optional] Advanced Hooks', course_id: 3)
@@ -83,6 +83,7 @@ Mod.create(title: 'Additional Practice: Active Record', course_id: 4)
 Mod.create(title: '[Optional] Getting Data from Remote Sources', course_id: 4)
 Mod.create(title: '[Optional] Scraping', course_id: 4)
 Mod.create(title: 'Web API Basics with Sinatra', course_id: 4)
+Mod.create(title: 'Code Challenge', course_id: 4)
 
 # ------------PHASE FOUR (4)-------------
 
