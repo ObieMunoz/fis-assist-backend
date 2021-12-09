@@ -17,7 +17,7 @@ class CourseController < ApplicationController
   end
 
   get '/course/:id/assignments' do
-    Course.find(params[:id]).assignments.to_json
+    Course.find(params[:id]).assignments.to_json(include: :questions)
   end
 
   get '/course/:id/students' do
