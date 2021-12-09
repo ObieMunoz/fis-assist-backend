@@ -28,5 +28,10 @@ class CourseController < ApplicationController
     Course.find(params[:id]).questions.to_json
   end
 
+  post '/courses' do
+    Course.create(title: params[:title], description: params[:description])
+      .to_json
+  end
+
   error { { message: 'Error retrieving course information.' }.to_json }
 end
