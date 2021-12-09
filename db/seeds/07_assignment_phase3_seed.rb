@@ -408,8 +408,8 @@ Assignment.create(
 
 puts '✓ Phase3 assignments loaded successfully!'
 
-Assignment.create(
-    title: '',
-    description: '',
-    mod_id: Mod.find_by(title: '').id
-)
+# Assignment.create(
+#     title: '',
+#     description: '',
+#     mod_id: Mod.find_by(title: '').id
+# )
