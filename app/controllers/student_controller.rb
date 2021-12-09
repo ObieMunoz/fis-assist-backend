@@ -29,7 +29,7 @@ class StudentController < ApplicationController
       last_name: params[:last_name],
       email: params[:email],
       slack_username: params[:slack_username],
-    )
+    ).to_json
   end
 
   error { { message: 'Error retrieving student information.' }.to_json }
