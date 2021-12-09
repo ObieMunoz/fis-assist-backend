@@ -6,14 +6,14 @@ Mod.create(title: 'CLI', course_id: 1)
 Mod.create(title: 'Git', course_id: 1)
 Mod.create(title: 'HTML', course_id: 1)
 Mod.create(title: 'CSS', course_id: 1)
-Mod.create(
-  title: 'Programming as Conversation Part 1: Expressions',
-  course_id: 1,
-)
-Mod.create(
-  title: 'Programming as Conversation Part 2: Statements',
-  course_id: 1,
-)
+# Mod.create(
+#   title: 'Programming as Conversation Part 1: Expressions',
+#   course_id: 1,
+# )
+# Mod.create(
+#   title: 'Programming as Conversation Part 2: Statements',
+#   course_id: 1,
+# )
 Mod.create(
   title:
     'Programming as Conversation Part 3: Bundling Expressions and Statements into Functions',
@@ -22,7 +22,7 @@ Mod.create(
 Mod.create(title: 'Working with Data Structures', course_id: 1)
 Mod.create(title: 'Manipulating the DOM', course_id: 1)
 Mod.create(title: 'JavaScript Events', course_id: 1)
-Mod.create(title: 'Project Mode', course_id: 1)
+Mod.create(title: 'Preparing for Phase 1', course_id: 1)
 
 # ------------PHASE ONE (1)-------------
 
