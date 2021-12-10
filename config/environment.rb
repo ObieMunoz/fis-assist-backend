@@ -2,6 +2,7 @@ require 'bundler/setup'
 Bundler.require
 
 configure :development do
+  puts '*********************************DEVELOPMENT*********************************'
   ENV['SINATRA_ENV'] ||= 'development'
   require 'bundler/setup'
   Bundler.require(:default, ENV['SINATRA_ENV'])
@@ -11,7 +12,10 @@ configure :development do
   )
 end
 
+puts 'OUTSIDE'
+
 configure :production do
+  puts '*********************************PRODUCTION*********************************'
   db = URI.parse(ENV['DATABASE_URL'] || 'postgres:///localhost/mydb')
 
   ActiveRecord::Base.establish_connection(
