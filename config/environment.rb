@@ -1,10 +1,9 @@
 require 'bundler/setup'
 require 'sinatra'
 
-puts ENV
+pp ENV
 # Bundler.require
 # Bundler.setup(:default)
-puts ENV['SINATRA_ENV']
 Bundler.require(:default, ENV['SINATRA_ENV'])
 
 configure :development do
