@@ -1,4 +1,5 @@
 require 'bundler/setup'
+puts ENV
 Bundler.require
 
 configure :development do
