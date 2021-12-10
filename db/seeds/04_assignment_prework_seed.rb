@@ -119,12 +119,6 @@ Assignment.create(
 # ------------Programming as Conversation Part 3: Bundling Expressions and Statements into Functions------------
 
 Assignment.create(
-  title: 'Testing With Javascript',
-  description: 'Learn about testing in JavaScript',
-  mod_id: Mod.find_by(title: 'Programming as Conversation Part 3: Bundling Expressions and Statements into Functions').id
-)
-
-Assignment.create(
   title: 'Testing with JavaScript Lab',
   description: 'Running tests & reading test results',
   mod_id: Mod.find_by(title: 'Programming as Conversation Part 3: Bundling Expressions and Statements into Functions').id
