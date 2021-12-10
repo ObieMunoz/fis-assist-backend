@@ -4,7 +4,7 @@ require 'sinatra'
 pp ENV
 # Bundler.require
 # Bundler.setup(:default)
-Bundler.require(:default, ENV['SINATRA_ENV'])
+Bundler.require(:default, ENV['RACK_ENV'])
 
 configure :development do
   puts '*********************************DEVELOPMENT*********************************'
