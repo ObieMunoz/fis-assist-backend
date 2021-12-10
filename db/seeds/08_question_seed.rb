@@ -399,7 +399,6 @@ Question.create(
 
           you will need to add the links inside span tags, and insert the columbia logo in between those two span tags.  Span tags are inline containers used to mark up a part of a text.  It is sort of like  a <div> element, but <div> is a block level element and <span> is an inline element.  So in order for the logo to fit in between both links, you will need to put them in between span tags so it all fits in one line.",
   assignment_id: Assignment.find_by(title: 'HTML Album Cover').id,
-  student_id: Student.all.sample.id,
 )
 
 # -------------------------------Riyadh Blog--------------------------------------

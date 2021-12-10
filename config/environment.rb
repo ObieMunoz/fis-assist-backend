@@ -1,6 +1,7 @@
 require 'bundler/setup'
 puts ENV
 # Bundler.require
+Bundler.setup(:default)
 
 configure :development do
   puts '*********************************DEVELOPMENT*********************************'
