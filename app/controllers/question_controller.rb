@@ -21,9 +21,9 @@ class QuestionController < ApplicationController
 
   post '/questions' do
     Question.create(
-      question: params['question'],
+      question: params[:question],
       answer: params[:answer],
-      student_id: params[:studentId][:value],
+      student_id: nil,
       assignment_id: params[:assignmentId][:value],
     ).to_json
   end
