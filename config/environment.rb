@@ -1,6 +1,6 @@
 require 'bundler/setup'
 puts ENV
-Bundler.require
+# Bundler.require
 
 configure :development do
   puts '*********************************DEVELOPMENT*********************************'
