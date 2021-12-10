@@ -1,4 +1,6 @@
 require 'bundler/setup'
+require 'sinatra'
+
 puts ENV
 # Bundler.require
 Bundler.setup(:default)
