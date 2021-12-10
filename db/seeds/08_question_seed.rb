@@ -835,7 +835,6 @@ Question.create(
           By setting language='JavaScript' we are assigning language a default value.",
   assignment_id:
     Assignment.find_by(title: 'JavaScript Function Parameters Lab').id,
-  student_id: Student.all.sample.id,
 )
 
 # -------------------------------JavaScript Calculator Challenge Lab--------------------------------------
@@ -1274,7 +1273,6 @@ Question.create(
     Assignment.find_by(
       title: 'Moving Things with JavaScript by Acting on Events',
     ).id,
-  student_id: Student.all.sample.id,
 )
 
 # ------------Preparing for Phase 1------------
@@ -1312,7 +1310,6 @@ Question.create(
         This way you can store the element inside of the newTaskForm variable and grab it by calling the variable instead of writing out the whole getElementById every time, it also makes your code a lot cleaner and more readable.
         ",
   assignment_id: Assignment.find_by(title: 'TaskLister Mini-Project').id,
-  student_id: Student.all.sample.id,
 )
 
 # ------------Communicating with the Server------------
@@ -1379,7 +1376,6 @@ Question.create(
         ```
         ",
   assignment_id: Assignment.find_by(title: 'Props Basics Lab').id,
-  student_id: Student.all.sample.id,
 )
 
 # ------------State and Events------------
