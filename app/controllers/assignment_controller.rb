@@ -7,7 +7,7 @@ class AssignmentController < ApplicationController
   get '/assignments' do
     puts params[:q]
     Assignment
-      .where('title LIKE ?', "%#{params[:q]}%")
+      .where('title ILIKE ?', "%#{params[:q]}%")
       .to_json(include: :questions)
   end
 
