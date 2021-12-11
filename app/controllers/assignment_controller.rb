@@ -5,7 +5,6 @@ class AssignmentController < ApplicationController
 
   # Add your routes here
   get '/assignments' do
-    puts params[:q]
     Assignment
       .where('title ILIKE ?', "%#{params[:q]}%")
       .to_json(include: :questions)
