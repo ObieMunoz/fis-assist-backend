@@ -20,13 +20,17 @@ class QuestionController < ApplicationController
   end
 
   post '/questions' do
-    Question.create(
-      question: params[:question],
-      answer: params[:answer],
-      student_id: nil,
-      assignment_id: params[:assignmentId][:value],
-    ).to_json
+    if Student.find(params[:student_id]).confirm_password(params[:password]) ==
+         true
+      Question.create(
+        question: params[:question],
+        answer: params[:answer],
+        student_id: nil,
+        assignment_id: params[:assignmentId][:value],
+      ).to_json
+    else
+      { message: 'Invalid password' }.to_json
+    end
   end
-
   error { { message: 'Error retrieving question information.' }.to_json }
 end

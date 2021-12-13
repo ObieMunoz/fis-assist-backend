@@ -4,7 +4,7 @@ class StudentController < ApplicationController
   set :show_exceptions, false
 
   get '/students' do
-    Student.all.to_json
+    Student.all.to_json(except: %i[created_at updated_at password])
   end
 
   get '/student/:id' do
@@ -29,6 +29,7 @@ class StudentController < ApplicationController
       last_name: params[:last_name],
       email: params[:email],
       slack_username: params[:slack_username],
+      password: params[:password],
     ).to_json
   end
 
