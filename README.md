@@ -32,4 +32,5 @@ Aside from learning more in Ruby, Sinatra, and React, a goal was to create a use
   - The backend will be live and hosted using Heroku.
     - The production database will be PostgreSQL.
 
+![fis-assist](https://github.com/ObieMunoz/fis-assist-backend/blob/main/fis-assist.jpeg)
 ![db-tables-plan](https://raw.githubusercontent.com/ObieMunoz/fis-assist/main/src/assets/plan-tables.png)
