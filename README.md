@@ -1,9 +1,8 @@
 ![FIS-Assist-Logo](https://raw.githubusercontent.com/ObieMunoz/fis-assist/main/src/assets/fis_logo.png)
 # FIS Assistance Program
 
-## Live Deployment Links
-- [FIS Assist (Frontend)](https://obiemunoz.github.io/fis-assist/)
-- [FIS Assist (Backend/API)](https://fis-assist.herokuapp.com/)
+## Live Deployment
+- [FIS Assist](https://obiemunoz.github.io/fis-assist/)
 
 ## Learning Goals
 
